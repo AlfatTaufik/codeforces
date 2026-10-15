@@ -1,0 +1,26 @@
+# Ignore everything by default; only solution files are tracked
+/*
+!/.gitignore
+!/README.md
+
+# Language folders (add more as needed)
+!/cpp/
+!/c/
+!/python/
+!/java/
+
+# Binaries & build artifacts (even inside language folders)
+*.exe
+*.o
+*.obj
+*.out
+*.class
+__pycache__/
+*.pyc
+
+# Editor / OS files
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+.DS_Store
