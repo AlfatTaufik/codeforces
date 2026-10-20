@@ -19,7 +19,17 @@ int main(void) {
             }
         }
     }
+    int total = address[2] - address[0];
+    if (total > 0)
+    {
+        total = total;
+    } else
+    {
+        total = -total;
+    }
     
-    printf("%d\n", address[1]);
+    
+    
+    printf("%d\n", total);
     return 0;
 }
