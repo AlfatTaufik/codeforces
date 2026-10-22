@@ -15,15 +15,15 @@ int main(void) {
             scanf("%d", &nums[i]);
         }
 
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < n - 1; i++)
         {
-            for (int j = 0; j < n; j++)
+            for (int j = 0; j < n - 1 - i; j++)
             {
-                if (nums[i] > nums[j])
+                if (nums[j] > nums[j + 1])
                 {
-                    int temp = nums[i];
-                    nums[i] = nums[j];
-                    nums[j] = temp;
+                    int temp = nums[j];
+                    nums[j] = nums[j + 1];
+                    nums[j + 1] = temp;
                 }
             }
         }
@@ -31,12 +31,14 @@ int main(void) {
         int ok = 1;
         for (int i = 0; i + 1 < n; i++)
         {
-            if (nums[i + 1])
+            if (nums[i + 1] - nums[i] > 1)
             {
-                /* code */
+                ok = 0;
+                break;
             }
-            
         }
+        
+        printf("%s\n", ok == 1 ? "YES" : "NO");
         
     }
     
